@@ -176,6 +176,7 @@
       nav = document.getElementById("nav");
       window.addEventListener("scroll", function () {
         let y = window.pageYOffset || document.documentElement.scrollTop;
+        y = Math.max(0, y);
         if (y > prevY) {
           // Scrolling down.
           navTop -= y - prevY;
