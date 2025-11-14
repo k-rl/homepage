@@ -1,0 +1,10 @@
+baseURL = "https://www.karlk.net"
+enableRobotsTXT = true
+languageCode = "en-us"
+
+[params]
+socialIcons = [
+  {name = "twitter",       url = "https://twitter.com"},
+  {name = "stackoverflow", url = "https://stackoverflow.com"},
+  {name = "github",        url = "https://github.com"},
+]
