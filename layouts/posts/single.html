@@ -1,25 +1,24 @@
 {{- define "main" }}
-
-<article class="post-single">
-  <header class="block post-header">
-    <h1 class="post-title">
+<article class="max-w-3xl mx-auto sm:text-lg text-slate-700 dark:text-slate-300">
+  <header>
+    <h1 class="font-bold text-slate-900 dark:text-white text-3xl sm:text-4xl">
       {{ .Title }}
-      {{- if .Draft }}<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>{{- end }}
     </h1>
-    {{- if .Description }}
-    <div class="post-description">
+    <div class="prose sm:prose-lg dark:prose-invert mt-2">
       {{ .Description }}
     </div>
-    {{- end }}
-    {{/* TODO: Post metadata */}}
+    <div class="mt-4 font-bold text-sm sm:text-base text-slate-900 dark:text-white">
+      Karl Krauth
+    </div>
+    <div class="mt-2 text-sm sm:text-base">
+      {{ .PublishDate | time.Format ":date_long"}}
+    </div>
+    </dl>
   </header>
-  {{/* TODO: TOC */}}
+  <hr class="mt-6 mb-6 opacity-5 border-slate-700 dark:border-slate-200" />
   <div class="prose prose-slate dark:prose-invert">
-    {{/* TODO: Anchored headings. */}}
-    {{ .Content }}
+    {{  .Content }}
   </div>
-  {{/* TODO: Add share icons */}}
-  {{/* TODO: add comments */}}
 </article>
 
 {{- end }}{{/* end main */}}
