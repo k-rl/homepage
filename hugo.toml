@@ -2,7 +2,17 @@ baseURL = "https://www.karlk.net"
 enableRobotsTXT = true
 languageCode = "en-us"
 
+[markup]
+[markup.goldmark]
+[markup.goldmark.extensions]
+[markup.goldmark.extensions.passthrough]
+enable = true
+[markup.goldmark.extensions.passthrough.delimiters]
+block = [['\[', '\]'], ['$$', '$$']]
+inline = [['\(', '\)']]
+
 [params]
+math = true
 socialIcons = [
   {name = "twitter",       url = "https://twitter.com"},
   {name = "stackoverflow", url = "https://stackoverflow.com"},
